@@ -1,0 +1,23 @@
+{
+  "name": "typeorm-migrations-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "migrate": "ts-node ./node_modules/.bin/typeorm migration:run",
+    "migrate.generate": "ts-node ./node_modules/.bin/typeorm migration:create -n ",
+    "migrate.revert": "ts-node ./node_modules/.bin/typeorm migration:revert"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.29",
+    "ts-node": "3.3.0",
+    "typescript": "2.5.2"
+  },
+  "dependencies": {
+    "pg": "^7.7.1",
+    "reflect-metadata": "^0.1.10",
+    "typeorm": "0.2.9"
+  }
+}
